@@ -23,12 +23,13 @@ public class Program
 }*/
 
 // Trying to rewrite the solution from memory
+// Day 2: expanding the Kata with good morning messages
 
 public class Greeting
 {
-    public string Greet(string name)
+    public string Greet(string time, string name)
     {
-        string msg = "Hello, " + name + "!";
+        string msg = $"Good {time}, {name}!";
         return msg;
     }
 }
@@ -37,6 +38,43 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        var greeting = new Greeting();
+        string messageA = greeting.Greet("morning", "Alice");
+        string messageB = greeting.Greet("afternoon", "Bob");
 
+        Console.WriteLine(messageA);
+        Console.WriteLine(messageB);
     }
 }
+
+// This is not how I would write code like this
+// I would rather list the variables of time and names in my Greeting method,
+// and then just call that method once in Program. 
+// Pseudo-notes (incorrect syntax):
+
+/*
+public class Greeting
+{
+    public string Greet(string time, string name)
+    {
+        var = name
+        {
+            Alice , Bob , Rowan
+        }
+        var = time
+        {
+            morning , afternoon , evening
+        }
+        string msg = $"Good {time}, {name}!";
+        return msg;
+    }
+}
+*/
+
+// It would then print both messages entirely from two lines of code in Program:
+
+/*
+Console.WriteLine(${Greeting});
+*/
+
+// ...or something like that.
