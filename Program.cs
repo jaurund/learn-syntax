@@ -25,6 +25,7 @@ public class Program
 // Trying to rewrite the solution from memory
 // Day 2: expanding the Kata with good morning messages
 
+/*
 public class Greeting
 {
     public string Greet(string time, string name)
@@ -45,7 +46,9 @@ public class Program
         Console.WriteLine(messageA);
         Console.WriteLine(messageB);
     }
+
 }
+*/
 
 // This is not how I would write code like this
 // I would rather list the variables of time and names in my Greeting method,
@@ -78,3 +81,34 @@ Console.WriteLine(${Greeting});
 */
 
 // ...or something like that.
+
+using System;
+
+
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(Solution.SolutionClass.EvenOrOdd(7));
+    }
+}
+
+namespace Solution
+{
+    public class SolutionClass
+    {
+        public static string EvenOrOdd(int i)
+        {
+            if (i % 2 == 0)
+            {
+                return "Even";
+            }
+            else
+            {
+                return "Odd";
+            }
+
+        }
+    }
+}
