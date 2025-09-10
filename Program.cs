@@ -112,3 +112,24 @@ namespace Solution
         }
     }
 }
+
+// Kata: return negative
+// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+public static class Kata
+{
+    public static int MakeNegative(int number)
+    {
+        if (number >= 0)
+        {
+            var result = number * -1;
+            {
+                return result;
+            }
+        }
+        else
+        {
+            return number;
+        }
+    }
+}
