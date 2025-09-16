@@ -1,17 +1,29 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 
-public static class Kata
+public class Program
 {
-    public static object[] RemoveEveryOther(object[] arr)
+    static void Main(string[] args)
     {
-        List<T> list = new();
-        int i = 1;
-        while (i < list.Count)
+
+    }
+    public static class Kata
+    {
+        public static object[] RemoveEveryOther(object[] arr)
         {
-            list.RemoveAt(i);
-            i++;
+            List<object> list = new();
+            int i = 1;
+            while (i < list.Count)
+            {
+                list.RemoveAt(i);
+                i++;
+            }
+            throw new NotImplementedException();
+
+
         }
     }
 }
+
 
 // https://www.codewars.com/kata/5769b3802ae6f8e4890009d2/train/csharp
